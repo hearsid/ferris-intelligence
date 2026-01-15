@@ -2,7 +2,11 @@
   "name": "@ferris-intelligence/source",
   "version": "0.0.0",
   "license": "MIT",
-  "scripts": {},
+  "scripts": {
+  "build:all": "nx run-many -t build --all --parallel",
+  "postbuild:merge": "mkdir -p dist/apps/shell/remotes/coming-soon && mkdir -p dist/apps/shell/remotes/contact-us && cp -r dist/apps/coming-soon/* dist/apps/shell/remotes/coming-soon/ && cp -r dist/apps/contact-us/* dist/apps/shell/remotes/contact-us/",
+  "deploy:build": "pnpm build:all && pnpm postbuild:merge"
+},
   "private": true,
   "devDependencies": {
     "@babel/core": "^7.14.5",
