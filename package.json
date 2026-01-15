@@ -3,8 +3,8 @@
   "packageManager": "pnpm@9.1.0",
   "version": "0.0.0",
   "license": "MIT",
-  "scripts": {
-  "build:all": "nx run-many -t build --all --parallel",
+"scripts": {
+  "build:all": "npx nx run-many -t build --all --parallel",
   "postbuild:merge": "mkdir -p dist/apps/shell/remotes/coming-soon && mkdir -p dist/apps/shell/remotes/contact-us && cp -r dist/apps/coming-soon/* dist/apps/shell/remotes/coming-soon/ && cp -r dist/apps/contact-us/* dist/apps/shell/remotes/contact-us/",
   "deploy:build": "pnpm build:all && pnpm postbuild:merge"
 },
