@@ -1,5 +1,6 @@
 {
-  "name": "@ferris-intelligence/source",
+  "name": "ferris-intelligence",
+  "packageManager": "pnpm@9.1.0",
   "version": "0.0.0",
   "license": "MIT",
   "scripts": {
