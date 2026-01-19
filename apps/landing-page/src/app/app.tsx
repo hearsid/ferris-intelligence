@@ -244,7 +244,14 @@ export function App() {
               Join leading organizations that trust Ferris Intelligence for their 
               mission-critical AI infrastructure.
             </p>
-            <button className="px-12 py-5 bg-gradient-to-r from-blue-600 to-cyan-600 hover:from-blue-700 hover:to-cyan-700 text-white font-bold rounded-xl transition-all duration-300 shadow-2xl shadow-blue-600/30 hover:shadow-blue-600/50 hover:scale-105 text-lg">
+            <button 
+              onClick={() => {
+                const subject = encodeURIComponent('Schedule a Demo - Ferris Intelligence');
+                const body = encodeURIComponent('Hello,\n\nI would like to schedule a demo for Ferris Intelligence.\n\nPlease let me know your availability.\n\nBest regards');
+                window.location.href = `mailto:me@hearsid.com?subject=${subject}&body=${body}`;
+              }}
+              className="px-12 py-5 bg-gradient-to-r from-blue-600 to-cyan-600 hover:from-blue-700 hover:to-cyan-700 text-white font-bold rounded-xl transition-all duration-300 shadow-2xl shadow-blue-600/30 hover:shadow-blue-600/50 hover:scale-105 text-lg"
+            >
               Schedule a Demo
             </button>
           </div>
