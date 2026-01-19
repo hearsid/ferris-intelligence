@@ -1,17 +1,3 @@
-const { createGlobPatternsForDependencies } = require('@nx/react/tailwind');
-const { join } = require('path');
-
-/** @type {import('tailwindcss').Config} */
-module.exports = {
-  content: [
-    join(
-      __dirname,
-      '{src,pages,components,app}/**/*!(*.stories|*.spec).{ts,tsx,html}',
-    ),
-    ...createGlobPatternsForDependencies(__dirname),
-  ],
-  theme: {
-    extend: {},
-  },
-  plugins: [],
-};
+// Tailwind v4 uses CSS-based configuration via @theme in styles.scss
+// This file is kept for compatibility but most config is in CSS
+module.exports = {};
