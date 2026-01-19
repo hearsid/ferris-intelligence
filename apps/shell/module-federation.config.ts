@@ -1,13 +1,17 @@
 import { ModuleFederationConfig } from '@nx/module-federation';
 
+const isDev = process.env['NX_MF_DEV_REMOTES'] === '1';
+
 const config: ModuleFederationConfig = {
   name: 'shell',
-  // In Dev, Nx handles the URLs automatically.
+  // In Dev, Nx handles the URLs automatically when NX_MF_DEV_REMOTES=1 is set.
   // In Prod, we manually point to the subfolders we will create later.
-  remotes: [
-    ['comingSoon', '/remotes/coming-soon/remoteEntry.js'],
-    ['contactUs', '/remotes/contact-us/remoteEntry.js'],
-  ],
+  remotes: isDev
+    ? ['comingSoon', 'contactUs']
+    : [
+        ['comingSoon', '/remotes/coming-soon/remoteEntry.js'],
+        ['contactUs', '/remotes/contact-us/remoteEntry.js'],
+      ],
 };
 
 export default config;
