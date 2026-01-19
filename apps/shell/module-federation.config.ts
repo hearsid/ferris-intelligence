@@ -7,10 +7,11 @@ const config: ModuleFederationConfig = {
   // In Dev, Nx handles the URLs automatically when NX_MF_DEV_REMOTES=1 is set.
   // In Prod, we manually point to the subfolders we will create later.
   remotes: isDev
-    ? ['comingSoon', 'contactUs']
+    ? ['comingSoon', 'contactUs', 'landingPage']
     : [
         ['comingSoon', '/remotes/coming-soon/remoteEntry.js'],
         ['contactUs', '/remotes/contact-us/remoteEntry.js'],
+        ['landingPage', '/remotes/landing-page/remoteEntry.js'],
       ],
 };
 

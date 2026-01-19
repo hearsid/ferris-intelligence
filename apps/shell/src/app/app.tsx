@@ -5,6 +5,7 @@ import { Link, Route, Routes } from 'react-router-dom';
 const ContactUs = React.lazy(() => import('contactUs/Module'));
 
 const ComingSoon = React.lazy(() => import('comingSoon/Module'));
+const LandingPage = React.lazy(() => import('landingPage/Module'));
 
 export function App() {
   return (
@@ -19,11 +20,15 @@ export function App() {
         <li>
           <Link to="/coming-soon">ComingSoon</Link>
         </li>
+        <li>
+          <Link to="/landing">LandingPage</Link>
+        </li>
       </ul>
       <Routes>
         <Route path="/" element={<NxWelcome title="shell" />} />
         <Route path="/contact-us" element={<ContactUs />} />
         <Route path="/coming-soon" element={<ComingSoon />} />
+        <Route path="/landing" element={<LandingPage />} />
       </Routes>
     </React.Suspense>
   );

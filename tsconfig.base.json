@@ -19,6 +19,7 @@
       "contact_us/Module": ["apps/contact_us/src/remote-entry.ts"],
       "comingSoon/Module": ["apps/coming-soon/src/remote-entry.ts"],
       "contactUs/Module": ["apps/contact-us/src/remote-entry.ts"],
+      "landingPage/Module": ["apps/landing-page/src/remote-entry.ts"],
       "@ferris-intelligence/ui": ["libs/ui/src/index.ts"],
       "@/libs/ui/*": ["libs/ui/*"]
     }
