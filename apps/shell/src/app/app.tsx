@@ -1,5 +1,4 @@
 import * as React from 'react';
-import NxWelcome from './nx-welcome';
 import { Link, Route, Routes } from 'react-router-dom';
 
 const ContactUs = React.lazy(() => import('contactUs/Module'));
@@ -42,7 +41,7 @@ export function App() {
       </nav>
       <div className="pt-16">
         <Routes>
-          <Route path="/" element={<NxWelcome title="shell" />} />
+          <Route path="/" element={<LandingPage title="Landing Page" />} />
           <Route path="/contact-us" element={<ContactUs />} />
           <Route path="/coming-soon" element={<ComingSoon />} />
           <Route path="/landing" element={<LandingPage />} />
