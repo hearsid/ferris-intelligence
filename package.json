@@ -6,7 +6,7 @@
 "scripts": {
   "dev": "NX_MF_DEV_REMOTES=1 npx nx run-many -t serve --all --parallel",
   "build:all": "npx nx run-many -t build --all --parallel",
-  "postbuild:merge": "mkdir -p dist/apps/shell/remotes/coming-soon && mkdir -p dist/apps/shell/remotes/contact-us && cp -r dist/apps/coming-soon/* dist/apps/shell/remotes/coming-soon/ && cp -r dist/apps/contact-us/* dist/apps/shell/remotes/contact-us/",
+  "postbuild:merge": "mkdir -p dist/apps/shell/remotes/coming-soon && mkdir -p dist/apps/shell/remotes/contact-us && mkdir -p dist/apps/shell/remotes/landing-page && cp -r dist/apps/coming-soon/* dist/apps/shell/remotes/coming-soon/ && cp -r dist/apps/contact-us/* dist/apps/shell/remotes/contact-us/ && cp -r dist/apps/landing-page/* dist/apps/shell/remotes/landing-page/",
   "deploy:build": "pnpm build:all && pnpm postbuild:merge"
 },
   "private": true,
