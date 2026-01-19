@@ -1,4 +1,5 @@
 import { Shield, Zap, Eye, ArrowRight, CheckCircle2, Ship, TrendingUp, Menu, X, Sparkles } from 'lucide-react';
+import '../styles.scss';
 
 export function App() {
   return (
