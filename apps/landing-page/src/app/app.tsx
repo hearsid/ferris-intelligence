@@ -1,6 +1,6 @@
 import { Shield, Zap, Eye, ArrowRight, CheckCircle2, Ship, TrendingUp, Menu, X, Sparkles } from 'lucide-react';
 import '../styles.scss';
-import logo from '../../../../libs/ui/src/assets/logo.png';
+import logo from '../assets/logo.png';
 
 export function App() {
   return (
@@ -10,12 +10,10 @@ export function App() {
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="flex items-center justify-between h-20">
             <div className="flex items-center gap-2">
-              <div className="w-30 h-30 bg-gradient-to-br from-blue-500 to-cyan-500 rounded-lg flex items-center justify-center">
-                <img src={logo} alt="Ferris Intelligence Logo" className="w-20 h-20" />
-              </div>
-              <span className="text-xl font-bold bg-gradient-to-r from-white to-slate-300 bg-clip-text text-transparent">
+              <img src={logo} alt="Ferris Intelligence Logo" className="w-15 h-15 rounded-lg" />
+              {/* <span className="text-xl font-bold bg-gradient-to-r from-white to-slate-300 bg-clip-text text-transparent">
                 Ferris Intelligence
-              </span>
+              </span> */}
             </div>
             <div className="hidden md:flex items-center gap-8">
               <a href="#features" className="text-slate-300 hover:text-white transition-colors font-medium">Features</a>
@@ -265,9 +263,7 @@ export function App() {
           <div className="grid md:grid-cols-4 gap-12 mb-12">
             <div className="md:col-span-2">
               <div className="flex items-center gap-3 mb-6">
-                <div className="w-10 h-10 bg-gradient-to-br from-blue-500 to-cyan-500 rounded-lg flex items-center justify-center">
-                  <Shield className="w-6 h-6 text-white" />
-                </div>
+                <img src={logo} alt="Ferris Intelligence Logo" className="w-10 h-10 rounded-lg" />
                 <span className="text-xl font-bold text-white">Ferris Intelligence</span>
               </div>
               <p className="text-slate-400 text-lg max-w-md leading-relaxed">
