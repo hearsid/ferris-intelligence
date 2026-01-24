@@ -1,4 +1,4 @@
-import { Shield, Zap, Eye, ArrowRight, CheckCircle2, Ship, TrendingUp, Menu, X, Sparkles } from 'lucide-react';
+import { Shield, Zap, Eye, ArrowRight, CheckCircle2, Ship, TrendingUp, Menu, X, Sparkles, Linkedin, Github, Mail, Bot } from 'lucide-react';
 import '../styles.scss';
 import logo from '../assets/logo.png';
 
@@ -270,8 +270,44 @@ export function App() {
                 Sovereign AI infrastructure for regulated industries. Deploy AI without compromising security.
               </p>
               <p className="text-slate-400 text-lg max-w-md leading-relaxed mt-4">
-                For more information, please contact us at <a href="mailto:hello@ferrisintelligence.com" className="text-cyan-400 hover:text-cyan-300 transition-colors">hello@ferrisintelligence.com</a>.
+                For more information, please contact us at <a href="mailto:hello@ferrisintelligence.com" className="text-blue-400 hover:text-blue-500 transition-colors">hello@ferrisintelligence.com</a>
               </p>
+              <div className="flex items-center gap-4 mt-6">
+                <a 
+                  href="https://www.linkedin.com/company/111516154" 
+                  target="_blank" 
+                  rel="noopener noreferrer"
+                  className="w-10 h-10 bg-slate-800/50 hover:bg-slate-700/50 border border-slate-700/50 hover:border-cyan-500/50 rounded-lg flex items-center justify-center transition-all duration-300 hover:scale-110"
+                  aria-label="LinkedIn"
+                >
+                  <Linkedin className="w-5 h-5 text-slate-400 hover:text-cyan-400 transition-colors" />
+                </a>
+                <a 
+                  href="https://github.com/FerrisIntelligence" 
+                  target="_blank" 
+                  rel="noopener noreferrer"
+                  className="w-10 h-10 bg-slate-800/50 hover:bg-slate-700/50 border border-slate-700/50 hover:border-cyan-500/50 rounded-lg flex items-center justify-center transition-all duration-300 hover:scale-110"
+                  aria-label="GitHub"
+                >
+                  <Github className="w-5 h-5 text-slate-400 hover:text-cyan-400 transition-colors" />
+                </a>
+                <a 
+                  href="https://huggingface.co/FerrisIntelligence" 
+                  target="_blank" 
+                  rel="noopener noreferrer"
+                  className="w-10 h-10 bg-slate-800/50 hover:bg-slate-700/50 border border-slate-700/50 hover:border-cyan-500/50 rounded-lg flex items-center justify-center transition-all duration-300 hover:scale-110"
+                  aria-label="Hugging Face"
+                >
+                 <Bot className="w-5 h-5 text-slate-400 hover:text-cyan-400 transition-colors" />
+                </a>
+                <a 
+                  href="mailto:hello@ferrisintelligence.com"
+                  className="w-10 h-10 bg-slate-800/50 hover:bg-slate-700/50 border border-slate-700/50 hover:border-cyan-500/50 rounded-lg flex items-center justify-center transition-all duration-300 hover:scale-110"
+                  aria-label="Email"
+                >
+                  <Mail className="w-5 h-5 text-slate-400 hover:text-cyan-400 transition-colors" />
+                </a>
+              </div>
             </div>
             <div>
               <h3 className="text-lg font-bold text-white mb-6">Product</h3>
