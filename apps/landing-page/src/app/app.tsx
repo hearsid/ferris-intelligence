@@ -19,7 +19,12 @@ export function App() {
               <a href="#features" className="text-slate-300 hover:text-white transition-colors font-medium">Features</a>
               <a href="#use-cases" className="text-slate-300 hover:text-white transition-colors font-medium">Use Cases</a>
               <a href="#contact" className="text-slate-300 hover:text-white transition-colors font-medium">Contact</a>
-              <button className="px-6 py-2.5 bg-gradient-to-r from-blue-600 to-cyan-600 hover:from-blue-700 hover:to-cyan-700 text-white font-semibold rounded-lg transition-all duration-200 shadow-lg shadow-blue-600/25">
+              <button 
+                onClick={() => {
+                  document.getElementById('cta')?.scrollIntoView({ behavior: 'smooth', block: 'center' });
+                }}
+                className="px-6 py-2.5 bg-gradient-to-r from-blue-600 to-cyan-600 hover:from-blue-700 hover:to-cyan-700 text-white font-semibold rounded-lg transition-all duration-200 shadow-lg shadow-blue-600/25 cursor-pointer"
+              >
                 Get Started
               </button>
             </div>
@@ -58,11 +63,21 @@ export function App() {
           </p>
           
           <div className="flex flex-col sm:flex-row gap-5 justify-center items-center mb-16">
-            <button className="group px-10 py-4 bg-gradient-to-r from-blue-600 to-cyan-600 hover:from-blue-700 hover:to-cyan-700 text-white font-semibold rounded-xl transition-all duration-300 flex items-center gap-2 shadow-2xl shadow-blue-600/30 hover:shadow-blue-600/50 hover:scale-105 text-lg">
+            <button 
+              onClick={() => {
+                document.getElementById('cta')?.scrollIntoView({ behavior: 'smooth', block: 'center' });
+              }}
+              className="group px-10 py-4 bg-gradient-to-r from-blue-600 to-cyan-600 hover:from-blue-700 hover:to-cyan-700 text-white font-semibold rounded-xl transition-all duration-300 flex items-center gap-2 shadow-2xl shadow-blue-600/30 hover:shadow-blue-600/50 hover:scale-105 text-lg cursor-pointer"
+            >
               Get Started
               <ArrowRight className="w-5 h-5 group-hover:translate-x-1 transition-transform" />
             </button>
-            <button className="px-10 py-4 bg-transparent border-2 border-slate-700 hover:border-slate-500 text-white font-semibold rounded-xl transition-all duration-300 hover:bg-slate-800/50 text-lg">
+            <button 
+              onClick={() => {
+                document.getElementById('cta')?.scrollIntoView({ behavior: 'smooth', block: 'center' });
+              }}
+              className="px-10 py-4 bg-transparent border-2 border-slate-700 hover:border-slate-500 text-white font-semibold rounded-xl transition-all duration-300 hover:bg-slate-800/50 text-lg cursor-pointer"
+            >
               Learn More
             </button>
           </div>
@@ -229,7 +244,7 @@ export function App() {
       </section>
 
       {/* CTA Section */}
-      <section className="relative px-4 py-32 md:py-40">
+      <section id="cta" className="relative px-4 py-32 md:py-40">
         <div className="absolute inset-0 bg-gradient-to-r from-blue-600/10 via-cyan-600/10 to-blue-600/10"></div>
         <div className="max-w-5xl mx-auto text-center relative z-10">
           <div className="bg-gradient-to-br from-slate-900/90 via-slate-800/50 to-slate-900/90 border border-slate-800/50 rounded-3xl p-16 md:p-20 shadow-2xl shadow-blue-900/20">
@@ -249,7 +264,7 @@ export function App() {
                 const body = encodeURIComponent('Hello,\n\nI would like to schedule a demo for Ferris Intelligence.\n\nPlease let me know your availability.\n\nBest regards');
                 window.location.href = `mailto:hello@ferrisintelligence.com?subject=${subject}&body=${body}`;
               }}
-              className="px-12 py-5 bg-gradient-to-r from-blue-600 to-cyan-600 hover:from-blue-700 hover:to-cyan-700 text-white font-bold rounded-xl transition-all duration-300 shadow-2xl shadow-blue-600/30 hover:shadow-blue-600/50 hover:scale-105 text-lg"
+              className="px-12 py-5 cursor-pointer bg-gradient-to-r from-blue-600 to-cyan-600 hover:from-blue-700 hover:to-cyan-700 text-white font-bold rounded-xl transition-all duration-300 shadow-2xl shadow-blue-600/30 hover:shadow-blue-600/50 hover:scale-105 text-lg"
             >
               Schedule a Demo
             </button>
