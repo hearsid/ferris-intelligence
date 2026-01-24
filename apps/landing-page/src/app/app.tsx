@@ -1,8 +1,11 @@
+import { useState } from 'react';
 import { Shield, Zap, Eye, ArrowRight, CheckCircle2, Ship, TrendingUp, Menu, X, Sparkles, Linkedin, Github, Mail, Bot } from 'lucide-react';
 import '../styles.scss';
 import logo from '../assets/logo.png';
 
 export function App() {
+  const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
+
   return (
     <div className="min-h-screen bg-gradient-to-br from-slate-950 via-slate-900 to-slate-950 text-white overflow-x-hidden">
       {/* Navigation */}
@@ -28,11 +31,53 @@ export function App() {
                 Get Started
               </button>
             </div>
-            <button className="md:hidden text-slate-300 hover:text-white">
-              <Menu className="w-6 h-6" />
+            <button 
+              onClick={() => setIsMobileMenuOpen(!isMobileMenuOpen)}
+              className="md:hidden text-slate-300 hover:text-white cursor-pointer"
+              aria-label="Toggle menu"
+            >
+              {isMobileMenuOpen ? <X className="w-6 h-6" /> : <Menu className="w-6 h-6" />}
             </button>
           </div>
         </div>
+
+        {/* Mobile Menu */}
+        {isMobileMenuOpen && (
+          <div className="md:hidden border-t border-slate-800/50 bg-slate-950/95 backdrop-blur-xl">
+            <div className="px-4 py-6 space-y-4">
+              <a 
+                href="#features" 
+                onClick={() => setIsMobileMenuOpen(false)}
+                className="block text-slate-300 hover:text-white transition-colors font-medium py-2"
+              >
+                Features
+              </a>
+              <a 
+                href="#use-cases" 
+                onClick={() => setIsMobileMenuOpen(false)}
+                className="block text-slate-300 hover:text-white transition-colors font-medium py-2"
+              >
+                Use Cases
+              </a>
+              <a 
+                href="#contact" 
+                onClick={() => setIsMobileMenuOpen(false)}
+                className="block text-slate-300 hover:text-white transition-colors font-medium py-2"
+              >
+                Contact
+              </a>
+              <button 
+                onClick={() => {
+                  setIsMobileMenuOpen(false);
+                  document.getElementById('cta')?.scrollIntoView({ behavior: 'smooth', block: 'center' });
+                }}
+                className="w-full px-6 py-3 bg-gradient-to-r from-blue-600 to-cyan-600 hover:from-blue-700 hover:to-cyan-700 text-white font-semibold rounded-lg transition-all duration-200 shadow-lg shadow-blue-600/25 cursor-pointer"
+              >
+                Get Started
+              </button>
+            </div>
+          </div>
+        )}
       </nav>
 
       {/* Hero Section */}
