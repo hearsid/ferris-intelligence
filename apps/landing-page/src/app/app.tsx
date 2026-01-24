@@ -247,7 +247,7 @@ export function App() {
               onClick={() => {
                 const subject = encodeURIComponent('Schedule a Demo - Ferris Intelligence');
                 const body = encodeURIComponent('Hello,\n\nI would like to schedule a demo for Ferris Intelligence.\n\nPlease let me know your availability.\n\nBest regards');
-                window.location.href = `mailto:me@hearsid.com?subject=${subject}&body=${body}`;
+                window.location.href = `mailto:hello@ferrisintelligence.com?subject=${subject}&body=${body}`;
               }}
               className="px-12 py-5 bg-gradient-to-r from-blue-600 to-cyan-600 hover:from-blue-700 hover:to-cyan-700 text-white font-bold rounded-xl transition-all duration-300 shadow-2xl shadow-blue-600/30 hover:shadow-blue-600/50 hover:scale-105 text-lg"
             >
@@ -268,6 +268,9 @@ export function App() {
               </div>
               <p className="text-slate-400 text-lg max-w-md leading-relaxed">
                 Sovereign AI infrastructure for regulated industries. Deploy AI without compromising security.
+              </p>
+              <p className="text-slate-400 text-lg max-w-md leading-relaxed mt-4">
+                For more information, please contact us at <a href="mailto:hello@ferrisintelligence.com" className="text-cyan-400 hover:text-cyan-300 transition-colors">hello@ferrisintelligence.com</a>.
               </p>
             </div>
             <div>
